@@ -1,0 +1,44 @@
+﻿@page "/porhacer"
+
+<h1 class="text-2xl font-bold mb-4">Lista de Actividades por Hacer</h1>
+
+<div class="mb-4">
+    <input @bind="nuevaActividad" class="border p-2 rounded w-64" placeholder="Agregar nueva actividad" />
+    <button @onclick="AgregarActividad" class="ml-2 bg-blue-500 text-white p-2 rounded">Agregar</button>
+</div>
+
+@if (actividades.Count == 0)
+{
+    <p>No hay actividades pendientes.</p>
+}
+else
+{
+    <ul class="list-disc pl-6">
+        @foreach (var actividad in actividades)
+        {
+            <li class="mb-2">
+                @actividad
+                <button @onclick="@(() => EliminarActividad(actividad))" class="ml-4 bg-red-500 text-white p-1 rounded">Eliminar</button>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<string> actividades = new();
+    private string nuevaActividad = string.Empty;
+
+    private void AgregarActividad()
+    {
+        if (!string.IsNullOrWhiteSpace(nuevaActividad))
+        {
+            actividades.Add(nuevaActividad);
+            nuevaActividad = string.Empty;
+        }
+    }
+
+    private void EliminarActividad(string actividad)
+    {
+        actividades.Remove(actividad);
+    }
+}

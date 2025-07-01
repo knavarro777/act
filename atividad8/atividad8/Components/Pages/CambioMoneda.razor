@@ -1,0 +1,66 @@
+﻿@page "/cambmoneda"
+@rendermode InteractiveServer
+<h3>Cambio de moneda</h3>
+<div class="form-group">
+    <label for="txtpesos" class="form-label">Pesos</label>
+    <input class="form-control input-box" id="txtpesos" @bind="_pesos" />
+</div>
+
+<div class="form-group">
+    <label for="txtdolares" class="form-label">Dolares</label>
+    <input class="form-control input-box" id="txtdolares" @bind="_dolares" />
+</div>
+
+<div class="form-group">
+    <label for="txteuros" class="form-label">Euros</label>
+    <input class="form-control input-box" id="txteuros" @bind="_euros" />
+</div>
+
+<div class="form-group">
+    <label for="txtlibras" class="form-label">Libras</label>
+    <input class="form-control input-box" id="txtlibras" @bind="_libras" />
+</div>
+
+<button @onclick="convertir" class="btn btn-primary">Convertir</button>
+
+@code {
+    private double _pesos;
+    private double _dolares;
+    private double _euros;
+    private double _libras;
+
+
+    private void convertir()
+    {
+            _dolares = _pesos * 0.05;
+            _euros = _pesos * 0.046;
+            _libras = _pesos * 0.039;
+    }
+}
+
+<style>
+    #h3 {
+        text-align: left;
+    }
+
+    .btn-primary {
+        width: auto;
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-label {
+        width: 100px;
+        margin-right: 35px;
+    }
+
+    .input-box {
+        flex-grow: 1;
+        margin-bottom: 15px;
+        
+    }
+</style>
+

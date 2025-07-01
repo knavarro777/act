@@ -1,0 +1,146 @@
+﻿@page "/mihistoria"
+
+<div class="descripcion">
+    <h1>Mi historia</h1>
+    <p>A continuación les escribiré información relevante de mi vida.</p>
+</div>
+
+<div class="contenedor">
+    <div class="tarjeta" id="tarjeta-formacion">
+        <img src="formacion.jpg" alt="Formación">
+        <h3>Formación</h3>
+        <p>Estudiante de la universidad de Colima en la facultad de telematica.</p>
+        <button>Conocer más</button>
+    </div>
+
+    <div class="tarjeta" id="tarjeta-hobbies">
+        <img src="hobbies.jpg" alt="Hobbies">
+        <h3>Hobbies</h3>
+        <p>Me gusta jugar.</p>
+        <button>Conocer más</button>
+    </div>
+
+    <div class="tarjeta" id="tarjeta-carrera">
+        <img src="carrera.jpg" alt="Carrera">
+        <h3>Mi carrera</h3>
+        <p>Espero aprender a programar y tener la preparacion suficiente para conseguir un buen trabajo.</p>
+        <button>Conocer más</button>
+    </div>
+</div>
+
+<style>
+    .descripcion {
+        background-color: #e0e0e0;
+        padding: 20px;
+        text-align: left;
+        margin: 20px;
+    }
+
+        .descripcion h1 {
+            font-size: 2em;
+            margin: 0;
+            color: #333;
+        }
+
+        .descripcion p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .titulo {
+        text-align: left;
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .descripcion {
+        text-align: left;
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+    }
+
+    #tarjeta-formacion {
+        width: 385px;
+        height: 410px;
+        border: 1px solid #ccc;
+        text-align: left;
+        background: #fff;
+    }
+
+        #tarjeta-formacion img {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 10px;
+        }
+
+    #tarjeta-hobbies {
+        width: 385px;
+        height: 360px;
+        border: 1px solid #ccc;
+        text-align: left;
+        background: #fff;
+    }
+
+        #tarjeta-hobbies img {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+    #tarjeta-carrera {
+        width: 385px;
+        height: 320px;
+        border: 1px solid #ccc;
+        text-align: left;
+        background: #fff;
+    }
+
+        #tarjeta-carrera img {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+
+        .tarjeta h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-left: 15px
+        }
+
+        .tarjeta p {
+            font-size: 14px;
+            color: #333;
+            margin-left: 15px
+        }
+
+        .tarjeta button {
+            margin-left: 15px;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+            .tarjeta button:hover {
+                background-color: #0056b3;
+            }
+</style>
+

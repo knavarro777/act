@@ -1,0 +1,64 @@
+﻿@page "/Lnumeros"
+@rendermode InteractiveServer
+<h3>Listas de numeros</h3>
+
+<div>
+    <label class="form-label">Numero 1</label>
+    <input class="form-control" type="number" @bind="_numerouno" />
+    <br />
+    <label class="form-label">Numero 2</label>
+    <input class="form-control" type="number" @bind="_numerodos" />
+    <br />
+<button @onclick="calcularnum" class="btn btn-success">Calcular</button>
+</div>
+<div style="display: flex; gap: 30px">
+
+<table class="table table-striped">
+    <thead>
+        <tr><th><h4>Numeros pares</h4></th></tr>
+    </thead>
+    <tbody> 
+        @foreach(int valor in pares)
+        {
+            <tr><td>@valor</td></tr>
+        }
+    </tbody>
+</table>
+<table class="table table-striped">
+    <thead>
+        <tr><th><h4>Numeros impares</h4></th></tr>
+    </thead>
+    <tbody> 
+        @foreach(int valor in impares)
+        {
+            <tr><td>@valor</td></tr>
+        }
+    </tbody>
+</table>
+</div>
+
+@code{
+    private int _numerouno;
+    private int _numerodos;
+    private List<int> pares = new List<int>();
+    private List<int> impares = new List<int>();
+
+    private void calcularnum()
+    {
+        pares.Clear();
+        impares.Clear();
+        int inicio = Math.Min(_numerouno, _numerodos);
+        int final = Math.Max(_numerouno, _numerodos);
+
+       
+       for(int i=inicio; i<=final; i++)
+       {
+           if (i % 2 == 0)
+              pares.Add(i);
+           else
+              impares.Add(i);
+       }
+    }
+}
+
+

@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\atividad8.bundle.scp.css",
+      "PackagePath": "staticwebassets\\atividad8.5lb0fa3tnp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\carrera.jpg",
+      "PackagePath": "staticwebassets\\carrera.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\formacion.jpg",
+      "PackagePath": "staticwebassets\\formacion.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Colibecas\\Downloads\\atividad8\\atividad8\\wwwroot\\hobbies.jpg",
+      "PackagePath": "staticwebassets\\hobbies.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.atividad8.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.atividad8.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.atividad8.props",
+      "PackagePath": "build\\atividad8.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.atividad8.props",
+      "PackagePath": "buildMultiTargeting\\atividad8.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.atividad8.props",
+      "PackagePath": "buildTransitive\\atividad8.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

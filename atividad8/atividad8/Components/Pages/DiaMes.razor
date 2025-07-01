@@ -1,0 +1,87 @@
+﻿@page "/DiaMes"
+@rendermode InteractiveServer
+<h3>Conocer los dias del mes</h3>
+
+<div class="form-group">
+    <label for="txtmes" class="form-label">Mes</label>
+    <input class="form-control input-box" id="txtmes" @bind="_mes" />
+</div>
+
+<div class="form-group">
+    <label for="txtan" class="form-label">Año</label>
+    <input class="form-control input-box" id="txtan" @bind="_anio" />
+</div>
+
+<button @onclick="calcular" class="btn btn-primary">Calcular</button>
+
+<h1>@_diasmes</h1>
+
+@code{
+    private int _dias;
+    private int _mes;
+    private int _anio;
+    private string _diasmes="";
+
+    private void calcular()
+    {
+        if (_mes < 1 || _mes > 12 || _anio < 1)
+        {
+            _diasmes = "Por favor, ingrese un mes (1-12) y un año válido.";
+        }
+        else
+        {
+            if ((_mes == 1) || (_mes == 3) || (_mes == 5) || (_mes == 7) || (_mes == 8) || (_mes == 10) || (_mes == 12))
+            {
+                _dias = 31;
+                _diasmes = "El mes "+_mes+" del año "+_anio+" tiene "+_dias+" dias";
+
+            }
+            else if(_mes == 2)
+            {
+                if (((_anio / 400 == 0)&&(_anio / 100 != 0))|| (_anio / 4 == 0)||(_anio==2000))
+                {
+                    _dias = 29;
+                    _diasmes = "El mes " + _mes + " del año " + _anio + " tiene " + _dias + " dias";
+                }
+                else
+                {
+                    _dias = 28;
+                    _diasmes = "El mes " + _mes + " del año " + _anio + " tiene " + _dias + " dias";
+                }
+
+            }
+            else
+            {
+                _dias = 30;
+                _diasmes = "El mes " + _mes + " del año " + _anio + " tiene " + _dias + " dias";
+            }
+        }
+    }
+}
+
+<style>
+    #h3 {
+        text-align: left;
+    }
+
+    .btn-primary {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-label {
+        width: 100px;
+        margin-right: 35px;
+    }
+
+    .input-box {
+        flex-grow: 1;
+        margin-bottom: 15px;
+        
+    }
+</style>
